@@ -18,10 +18,11 @@ public class Banking {
     
     static User actuser, otheruser;
     
+    static Scanner sc = new Scanner(System.in);
+    
     
     static User userLogin (){
     
-        Scanner sc = new Scanner(System.in);
         String input;
         User user;
                 
@@ -49,8 +50,6 @@ public class Banking {
                             user = new User(input);
                             userlist.add(user);
                             
-                            sc.close();
-                            
                             return user;}
                         
                         break;
@@ -66,8 +65,6 @@ public class Banking {
                         else {
                               System.out.println("\n");
                                
-                              sc.close();  
-                              
                               return found;
                         }
                             
@@ -103,7 +100,6 @@ public class Banking {
         
     static void menu(){
         
-        Scanner sc = new Scanner(System.in);
         boolean stepout = false;
         String input;
         int intinput;
@@ -224,7 +220,6 @@ public class Banking {
                 
         }while(!stepout);
         
-        sc.close();
     }   
     
     
