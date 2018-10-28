@@ -48,9 +48,10 @@ public class Banking {
                             System.out.println("\n");
                             user = new User(input);
                             userlist.add(user);
+                            
+                            sc.close();
+                            
                             return user;}
-                        
-                        
                         
                         break;
 
@@ -62,13 +63,20 @@ public class Banking {
                         User found = isUser(input);
                         
                         if (found == null)System.out.println("Nincs ilyen User!\n");
-                        else {System.out.println("\n");
+                        else {
+                              System.out.println("\n");
+                               
+                              sc.close();  
+                              
                               return found;
                         }
                             
                         break;
 
-                    case "3": System.exit(0);
+                    case "3": 
+                        
+                        sc.close();
+                        System.exit(0);
 
                     default: break;
 
@@ -204,6 +212,7 @@ public class Banking {
                             
                             break;
                         case "7":
+                            
                             System.out.println("\n");
                             stepout = true;
                             
@@ -214,6 +223,8 @@ public class Banking {
         
                 
         }while(!stepout);
+        
+        sc.close();
     }   
     
     
